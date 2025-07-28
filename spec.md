@@ -1,27 +1,33 @@
-# React Component Checkpoint Spec
+# FIFA Player Cards Spec
 
 ## Overview
-Build a React app using Create React App demonstrating JSX and reusable components. Displays product details in a Bootstrap card and a personalized greeting.
+Build a React app using Create React App that displays a list of FIFA player cards. Each card shows player details in a React Bootstrap card.
 
 ## Goals
 - Scaffold app with `create-react-app`
-- Define a `product` JSON in `product.js` (name, price, description, image URL)
-- Create four components for each field: `Name`, `Price`, `Description`, `Image` in `components/`
-- Use React Bootstrap Card in `App.js` to compose these components
-- Show greeting message below card: "Hello, <FirstName>!" or "Hello, there!"
-- Conditionally render a profile image if `firstName` provided
+- Create `players.js` exporting an array of at least four player objects
+- Build a `Player` component to render individual player data
+- Build a `PlayersList` component to map over players and render `Player` for each
+- Use React Bootstrap for UI
+- Apply inline styling to `Player` cards
+- Define default props in `Player` for all attributes
+- Render `PlayersList` in `App.js`
+
+## Player Attributes
+- `name` (string)
+- `team` (string)
+- `nationality` (string)
+- `jerseyNumber` (number)
+- `age` (number)
+- `image` (string URL)
+
+## Use Cases
+1. **View Player Cards**: App loads and displays all player cards
 
 ## Technical Stack
 - React (Create React App)
-- React Bootstrap for UI
-- JSX for component logic
+- React Bootstrap for cards
+- Inline styling
 
-## Requirements
-1. **product.js** exports:
-   ```js
-   export const product = {
-     name: 'Awesome Widget',
-     price: 49.99,
-     description: 'An awesome widget that makes life easier.',
-     image: 'https://via.placeholder.com/150'
-   };
+## Open Questions
+- Should we add interaction (e.g., flip card)? (future enhancement)
